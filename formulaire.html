@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title> Test d'un formulaire</title>
+<!-- <script src = "/script.js" type="text/javascript" ></script> -->
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+<script type = "text/JavaScript">
+    function verifier() {
+    
+       if (password.value == "hakim2022" && pseudo.value=="hakim"){
+             alert("Vous etes connectes");
+       }else if (pseudo.value=="hakim" && password.value != "hakim2022" ){
+             alert("Mot de passe incorrect");
+       } 
+       else {
+             alert("pseudo et mot de passe incorrects");
+        }
+        
+    }
+ </script>
+
+<div class="Alimentation-base">
+    <h1>Alimentaiton de la base</h1>
+    <p>Veuillez remplir les champs ci-dessous: </p>
+   
+    <form action="/page-traitement-donnees" method="post">
+    <div>
+    <label for="pseudo">Votre pseudo</label>
+    <input type="text" id="pseudo" name="pseudo" placeholder="pseudo" required>
+    </div>
+   <br>
+    <div>
+    <label for="mot de passe">Votre e-mail</label>
+    <input type="password" id="password" name="password" placeholder="********" required>
+    </div>
+    <div>
+    <br>
+
+    <input type = "button" onclick = "verifier()" name = "connecter" value = "connecter" />    <br>
+    <hr>
+    <br>
+</div>
+</body>
+</html>
