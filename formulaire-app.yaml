@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: formulaire
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: formulaire
+  template:
+    metadata:
+      labels:
+        app: formulaire
+    spec:
+      containers:
+      - image: formulaire-image
+        name: formulaire-image
+        env:
+        - name: POSTGRES_HOST
+          value: postgres
+        - name: POSTGRES_PORT
+          value: "5432"
+        - name: POSTGRES_DATABASE
+          value: url_shortener_db
+        - name: POSTGRES_USER
+          value: user
+        - name: POSTGRES_PASSWORD
+          value: mysecretpassword
+        ports:
+        - containerPort: 8080
