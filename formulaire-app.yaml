@@ -27,4 +27,4 @@ spec:
         - name: POSTGRES_PASSWORD
           value: mysecretpassword
         ports:
-        - containerPort: 8080
+        - containerPort: 80
