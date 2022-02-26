@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: formulaire
+  name: appli-web
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: formulaire
+      app: appli-web
   template:
     metadata:
       labels:
-        app: formulaire
+        app: appli-web
     spec:
       containers:
-      - image: hrabia/connexion-app
-        name: connexion-app
+      - image: hrabia/appli-web
+        name: appli-web
         env:
         - name: POSTGRES_HOST
           value: postgres
