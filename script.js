@@ -1,4 +1,0 @@
-function enlever() {
-    recherche.value = "";
- }
- 
