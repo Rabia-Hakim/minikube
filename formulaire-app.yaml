@@ -13,8 +13,8 @@ spec:
         app: formulaire
     spec:
       containers:
-      - image: formulaire-image
-        name: formulaire-image
+      - image: hrabia/connexion-app
+        name: connexion-app
         env:
         - name: POSTGRES_HOST
           value: postgres
@@ -27,4 +27,4 @@ spec:
         - name: POSTGRES_PASSWORD
           value: mysecretpassword
         ports:
-        - containerPort: 80
+        - containerPort: 8080
