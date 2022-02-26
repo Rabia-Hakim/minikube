@@ -1,3 +1,3 @@
 docker pull hrabia/connexion-app
-kubectl create -f formulaire-app.yaml
-kubectl create -f formulaire-service.yaml
+kubectl create -f deploy-appli-web.yaml
+kubectl create -f service-appli-web.yaml
